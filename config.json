@@ -1,0 +1,15 @@
+{
+    "branch": "Git branch to pull from (Ex: master)",
+    "credentials": {
+        "username": "GitHub username",
+        "password": "GitHub password"
+    },
+    "localRepo": "Path of local repository (Ex: /home/user/repo)",
+    "port": "Port to run the webhook server on",
+    "remoteRepo": {
+        "name": "Name of the repository on GitHub (Ex: my-project)",
+        "username": "Owner of the repository's username"
+    },
+    "route": "Endpoint that should be receiving the payload (Ex: /payload). Defaults to /",
+    "secret": "(Optional) Secret token associated with the webhook to validate the payload"
+}
