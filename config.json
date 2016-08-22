@@ -1,5 +1,5 @@
 {
-    "branch": "Git branch to pull from (Ex: master)",
+    "branch": "Git branch to pull from (Ex: gh-pages). Defaults to master",
     "credentials": {
         "username": "GitHub username",
         "password": "GitHub password"

@@ -2,6 +2,10 @@ const config = require(process.argv[2] || "./config.json");
 const exec = require("child_process").exec;
 const app = require("express")();
 
+if (!config.branch) {
+    config.branch = "master";
+}
+
 if (config.secret) {
     app.use(require("express-x-hub")({
         secret: config.secret
