@@ -3,6 +3,8 @@ const readlineSync = require("readline-sync");
 const exec = require("child_process").exec;
 const app = require("express")();
 
+app.disable("x-powered-by");
+
 if (!config.branch) {
     config.branch = "master";
 }
@@ -23,6 +25,12 @@ else if (!config.credentials.password) {
     });
 }
 
+if (!config.secret) {
+    config.secret = readlineSync.question("Enter your secret (optional): ", {
+        hideEchoBack: true,
+        mask: ""
+    });
+}
 if (config.secret) {
     app.use(require("express-x-hub")({
         secret: config.secret
